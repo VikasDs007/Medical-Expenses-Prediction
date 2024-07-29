@@ -1,4 +1,4 @@
-Predicting Medical Expenses with Linear Regression
+**Predicting Medical Expenses with Linear Regression**
 This project aims to predict medical expenses using linear regression, exploring the relationship between various individual characteristics and healthcare costs. The goal is to provide insights that could be valuable for healthcare providers, insurance companies, and policymakers.
 
 Table of Contents
@@ -29,6 +29,7 @@ Number of Children
 Smoker
 Region
 Charges (Medical expenses)
+
 3. Methodology
 Data Cleaning and Preparation: Handling missing values, outliers, and converting categorical variables into numerical format.
 Exploratory Data Analysis (EDA): Visualizing distributions, correlations, and relationships between features to uncover patterns and insights.
