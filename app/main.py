@@ -73,16 +73,55 @@ st.markdown("""
 @st.cache_data
 def load_data():
     """Load the insurance dataset"""
-    try:
-        data = pd.read_csv('data/raw/insurance.csv')
-        return data
-    except FileNotFoundError:
+    import os
+    
+    # Try multiple possible paths
+    possible_paths = [
+        'data/raw/insurance.csv',
+        'data/insurance.csv',
+        './data/raw/insurance.csv',
+        './data/insurance.csv',
+        'insurance.csv'
+    ]
+    
+    for path in possible_paths:
         try:
-            data = pd.read_csv('data/insurance.csv')
-            return data
-        except FileNotFoundError:
-            st.error("Dataset not found. Please ensure the insurance dataset is available.")
-            return None
+            if os.path.exists(path):
+                data = pd.read_csv(path)
+                st.success(f"✅ Dataset loaded from: {path}")
+                return data
+        except Exception as e:
+            continue
+    
+    # If no file found, create sample data
+    st.warning("📊 Using sample data for demonstration")
+    
+    # Create sample insurance data
+    np.random.seed(42)
+    n_samples = 1000
+    
+    sample_data = pd.DataFrame({
+        'age': np.random.randint(18, 65, n_samples),
+        'sex': np.random.choice(['male', 'female'], n_samples),
+        'bmi': np.random.normal(26, 4, n_samples).clip(15, 50),
+        'children': np.random.randint(0, 6, n_samples),
+        'smoker': np.random.choice(['yes', 'no'], n_samples, p=[0.2, 0.8]),
+        'region': np.random.choice(['northeast', 'northwest', 'southeast', 'southwest'], n_samples)
+    })
+    
+    # Generate realistic charges based on factors
+    charges = (
+        1000 +  # base cost
+        sample_data['age'] * 100 +  # age factor
+        (sample_data['bmi'] - 25).clip(0, None) * 200 +  # BMI factor
+        (sample_data['smoker'] == 'yes') * 20000 +  # smoking factor
+        sample_data['children'] * 500 +  # children factor
+        np.random.normal(0, 2000, n_samples)  # random variation
+    ).clip(1000, None)
+    
+    sample_data['charges'] = charges
+    
+    return sample_data
 
 @st.cache_resource
 def load_models():

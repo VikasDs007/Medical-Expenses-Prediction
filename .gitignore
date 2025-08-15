@@ -132,9 +132,9 @@ dmypy.json
 .streamlit/
 
 # Data files (optional - remove if you want to track data)
-*.csv
+# *.csv  # Commented out to allow insurance.csv
 *.xlsx
-*.json
+# *.json  # Commented out to allow JSON exports
 *.pkl
 *.joblib
 
