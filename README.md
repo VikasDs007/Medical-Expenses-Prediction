@@ -19,6 +19,10 @@ This project demonstrates a complete machine learning pipeline for predicting me
 - **💾 Export Functionality**: Download predictions as JSON or CSV reports
 - **📱 Responsive Design**: Professional interface that works on all devices
 
+## 🚀 Live Demo
+
+**🌐 Try the live application:** [AI Insurance Cost Predictor](https://your-app-name.streamlit.app)
+
 ## 🚀 Quick Start
 
 ### Option 1: One-Click Run
