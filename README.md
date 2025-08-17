@@ -21,7 +21,7 @@ This project demonstrates a complete machine learning pipeline for predicting me
 
 ## 🚀 Live Demo
 
-**🌐 Try the live application:** [AI Insurance Cost Predictor](https://your-app-name.streamlit.app)
+**🌐 Try the live application:** [AI Insurance Cost Predictor](https://ai-insurance-predictor.streamlit.app/)
 
 ## 🚀 Quick Start
 
@@ -226,10 +226,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👤 Author
 
-**Your Name**
-- 💼 LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
-- 🐙 GitHub: [Your GitHub Profile](https://github.com/yourusername)
-- 📧 Email: your.email@example.com
+**Vikas Chaurasia**
+- 💼 LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/vikasds007/)
+- 🐙 GitHub: [Your GitHub Profile](https://vikasds007.github.io/)
+- 📧 Email: vikasjchaurasia@gmail.com
 
 ## 🙏 Acknowledgments
 
